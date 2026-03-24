@@ -1,0 +1,51 @@
+import React from 'react'
+
+
+const Footer = () => {
+  return (
+    <footer className="footer text-light pt-5 pb-3">
+      <div className="container">
+        <div className="row">
+
+          {/* Brand */}
+          <div className="col-md-4 mb-4">
+            <h5 className="fw-bold">The Timeless Trunk</h5>
+            <p>
+              We create, improve and continue the culture of fashion and its vintage routes
+            </p>
+          </div>
+
+
+          <div class="col-md-4">
+
+                    <h2 class=" text-center">Contact Us</h2>
+
+                    <div>
+                    <p class=""><b>Telephone:</b> +254721364895/+25478901234</p>
+                    <p class=""><b>Email:</b> thetimelesstrunk@gmail.com</p>
+                    </div>
+
+                </div>
+
+          {/* Social */}
+          <div className="col-md-4 mb-4">
+            <h6 className="fw-semibold">Follow Us</h6>
+            <div className="d-flex gap-3">
+              <a href="http://www.facebook.com" className="footer-link">Facebook</a>
+              <a href="http://www.x.com" className="footer-link">Twitter</a>
+              <a href="http://www.instagram.com" className="footer-link">Instagram</a>
+            </div>
+          </div>
+
+        </div>
+
+        {/* Bottom */}
+        <div className="text-center border-top pt-3 mt-3 small">
+         &copy;{new Date().getFullYear()} TheTimelessTrunk. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  )
+}
+
+export default Footer
