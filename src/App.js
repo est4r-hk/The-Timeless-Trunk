@@ -8,6 +8,10 @@ import Signin from './components/Signin';
 import AddClothe from './components/AddClothe';
 import MpesaPayment from './components/MpesaPayment';
 import Footer from './components/Footer';
+import Navbar from './components/Navbar';
+import Carousel  from './components/Mycarousel';
+import UserDetails from './components/UserDetails';
+
 
 
 function App() {
@@ -15,24 +19,31 @@ function App() {
   return (
 
     <Router>
+      
 
       <div className='App'>
 
         <div className='App-header'>
 
-          <h1 className='header'>Welcome to The Timeless Trunk</h1>
-
+          <h1 className='header1 text-left '>Welcome to The Timeless Trunk</h1>
+        
         </div>
+        
+        <Navbar/>
+        <UserDetails/>
+        
+          {/* Linking routes
+          <nav className='text-left'>
+            
 
-        {/* Linking routes */}
-        <nav className='navs'>
+            <Link to="/" className=' App-link btn btn-outline dark ms-3'>Clothes</Link>
+            <Link to="/Signup" className='btn btn-outline-dark ms-3'>Sign Up</Link>
+            <Link to="/Signin" className='btn btn-outline-dark ms-3'>Sign In</Link>
+            <Link to="/AddClothe" className='btn btn-outline-dark ms-3'>Add Clothe</Link>
+            
+          </nav> */}
 
-          <br /><Link to="/" className=' App-link btn btn-outline dark ms-3'>Clothes</Link>
-          <Link to="/Signup" className='btn btn-outline-dark ms-3'>Sign Up</Link>
-          <Link to="/Signin" className='btn btn-outline-dark ms-3'>Sign In</Link>
-          <Link to="/AddClothe" className='btn btn-outline-dark ms-3'>Add Clothe</Link>
           
-        </nav>
 
         <Routes>
 
@@ -43,8 +54,12 @@ function App() {
           <Route path='/makepayment' element={<MpesaPayment/>}/>
           
         </Routes>
-        
+        {/* <Carousel/> */}
       <Footer/>
+
+      
+
+      
 
       </div>
 

@@ -60,7 +60,7 @@ const Clothes = () => {
                         <p className='text-muted'>{product.product_description}</p>
                         <b className='text-warning'>Ksh.{product.product_cost}</b>
 
-                        <button className='btn btn-dark mt-2 w-100' onClick={()=> navigate("/",{state:{product}})}>Purchase Now</button>
+                        <button className='btn btn-dark mt-2 w-100' onClick={()=> navigate("/makepayment",{state:{product}})}>Purchase Now</button>
                     </div>
                 </div>
             </div>

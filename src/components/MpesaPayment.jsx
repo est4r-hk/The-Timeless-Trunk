@@ -30,10 +30,15 @@ const handleSubmit = async(e)=>{
   }
 }
   return (
+
     <div className='row justify-content-center'>
+
       <div className='formpesa col-md-6 card shadow card-margin m-2 p-3'>
-        <h1 className='header'>LIPA NA MPESA</h1>
+
+        <h1 className='header2'>LIPA NA MPESA</h1>
+
         <div className=''>
+
           <img className='product_img' src={img_url + product.product_photo} alt={product.product_photo}/>
           <p className='text-danger'>Product Name:{product.product_name}</p>
           <p className='text-warning'>Product Cost:{product.product_cost}</p>

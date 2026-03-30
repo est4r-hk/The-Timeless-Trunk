@@ -6,28 +6,39 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 const Mycarousel = () => {
   return (
     <div className="container mt-4">
+
       <div className="row">
+
         <div className="col-md-10 mx-auto">
+
             <div id="carouselExample" className="carousel slide" data-bs-ride="carousel">
        
         {/* Indicators */}
+
         <div className="carousel-indicators">
+
           <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" className="active"></button>
+
           <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1"></button>
+
           <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2"></button>
+
           <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="3"></button>
+
         </div>
 
         {/* Slides */}
         <div className="carousel-inner">
 
           <div className="carousel-item active">
+
             <img
               src="images/fashion-landing.jpg"
               className="d-block w-100"
               alt="First slide"
               height="450px"
             />
+
           </div>
 
           <div className="carousel-item">
@@ -41,6 +52,7 @@ const Mycarousel = () => {
           </div>
 
           <div className="carousel-item">
+
             <img
               src="images/fashion-landing3.jpg"
               className="d-block w-100"
@@ -52,6 +64,7 @@ const Mycarousel = () => {
 
 
            <div className="carousel-item">
+            
             <img
               src="images/fashion-landing4.jpg"
               className="d-block w-100"
@@ -83,9 +96,13 @@ const Mycarousel = () => {
         </button>
 
       </div>
+
         </div>
+
       </div>
+
     </div>
+
   )
 }
 
