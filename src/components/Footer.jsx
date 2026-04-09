@@ -11,7 +11,10 @@ const Footer = () => {
           <div className="col-md-4 mb-4">
             <h5 className="fw-bold">The Timeless Trunk</h5>
             <p>
-              We create, improve and continue the culture of fashion and its vintage routes
+              We believe in timeless fashion that transcends trends. 
+              Our curated collection of pre-loved clothing offers a sustainable and stylish alternative for
+               fashion enthusiasts. Join us in embracing the beauty of second-hand fashion and
+                making a positive impact on the environment.
             </p>
           </div>
 

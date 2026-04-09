@@ -53,7 +53,7 @@ const Signup = () => {
                         <input type="email" placeholder='Enter email' className='form-control' onChange={(e)=>setEmail(e.target.value)}/><br />
                         <input type="password" placeholder='Enter password' className='form-control' onChange={(e)=>setPassword(e.target.value)}/><br />
                         <input type="tel" placeholder='Enter phone number' className='form-control' onChange={(e)=>setPhone(e.target.value)}/><br />
-
+                        <input type="submit" value="Sign In" className='btn btn-dark form-control'/><br />
                     </fieldset><br />
 
                     {/* Incase user already has an account */}

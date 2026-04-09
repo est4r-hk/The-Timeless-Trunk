@@ -9,7 +9,7 @@ import AddClothe from './components/AddClothe';
 import MpesaPayment from './components/MpesaPayment';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
-import Carousel  from './components/Mycarousel';
+// import Carousel  from './components/Mycarousel';
 import UserDetails from './components/UserDetails';
 
 
@@ -57,9 +57,7 @@ function App() {
         {/* <Carousel/> */}
       <Footer/>
 
-      
-
-      
+    
 
       </div>
 

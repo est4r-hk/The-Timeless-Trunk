@@ -55,7 +55,7 @@ const Signin = () => {
                     <fieldset>
                         <input type="email" placeholder='Enter email' className='form-control' onChange={(e)=>setEmail(e.target.value)}/><br />
                         <input type="password" placeholder='Enter password' className='form-control' onChange={(e)=>setPassword(e.target.value)}/><br />
-                        <input type="submit" value="Sign in" className='form-control'/><br />
+                        <input type="submit" value="Sign in" className='btn btn-dark form-control'/><br />
                         <br /><Link to = "/signin" className='btn btn-dark w-100'>Don't have an Account ? Sign up</Link>
                     </fieldset>
 
