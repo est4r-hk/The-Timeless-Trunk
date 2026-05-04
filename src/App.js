@@ -1,6 +1,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
+
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Clothes from './components/Clothes';
 import Signup from './components/Signup';
@@ -11,6 +12,7 @@ import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 // import Carousel  from './components/Mycarousel';
 import UserDetails from './components/UserDetails';
+import NotFound from './components/NotFound';
 
 
 
@@ -53,6 +55,8 @@ function App() {
           <Route path='/addclothe' element={<AddClothe/>}/>
           <Route path='/makepayment' element={<MpesaPayment/>}/>
           
+          {/* 404 Route */}
+            <Route path="*" element={<NotFound/>} />
         </Routes>
         {/* <Carousel/> */}
       <Footer/>
