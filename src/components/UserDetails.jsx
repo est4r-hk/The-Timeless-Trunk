@@ -1,14 +1,36 @@
-import  { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const UserDetails = () => {
   const [user, setUser] = useState(null)
 
-  // Load user from localStorage
+  // Load user from localStorage safely
   useEffect(() => {
-    const storedUser = localStorage.getItem('user')
+    try {
+      const storedUser = localStorage.getItem('user')
+      if (storedUser) {
+        setUser(JSON.parse(storedUser))
+      }
+    } catch (error) {
+      console.error('Failed to parse user from localStorage:', error)
+      localStorage.removeItem('user')
+    }
+  }, [])
 
-    if (storedUser) {
-      setUser(JSON.parse(storedUser))
+  // Sync user state across tabs/windows
+  useEffect(() => {
+    const handleStorageChange = () => {
+      try {
+        const storedUser = localStorage.getItem('user')
+        setUser(storedUser ? JSON.parse(storedUser) : null)
+      } catch {
+        setUser(null)
+      }
+    }
+
+    window.addEventListener('storage', handleStorageChange)
+
+    return () => {
+      window.removeEventListener('storage', handleStorageChange)
     }
   }, [])
 
@@ -19,18 +41,17 @@ const UserDetails = () => {
   }
 
   return (
-    <div className="d-flex justify-content-end align-items-center p-3  text-light">
-      
+    <div className="d-flex justify-content-end align-items-center p-3 text-light">
       {user ? (
         <div className="d-flex align-items-center gap-3">
           
           {/* Username */}
           <div className="fw-bold">
-            👋 Hello, {user.username}
+            👋 Hello, {user?.username || 'User'}
           </div>
 
           {/* Logout Button */}
-          <button 
+          <button
             className="btn btn-danger btn-sm"
             onClick={handleLogout}
           >
@@ -43,7 +64,6 @@ const UserDetails = () => {
           Not logged in
         </div>
       )}
-
     </div>
   )
 }
